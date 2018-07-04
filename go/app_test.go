@@ -17,7 +17,7 @@ func TestPata(t *testing.T) {
 		{"hamster", "lobster", "hlaombsstteerr"},
 	}
 	for _, test := range tests {
-		req, _ := http.NewRequest("GET", "/pata", nil)
+		req, _ := http.NewRequest("GET", "/pata", nil) //リクエストを作っている
 		req.Form = make(url.Values)
 		req.Form["a"] = []string{test.a}
 		req.Form["b"] = []string{test.b}
